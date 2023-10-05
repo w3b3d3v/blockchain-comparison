@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Blockchain Comparison</title>
-        <meta name="description" content="Blockchain Comparison" />
+        <title>Blockchains Technical Comparison</title>
+        <meta name="description" content="Blockchains Technical Comparison" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -40,9 +40,9 @@ export default function Home() {
         </a>
       </div>
       <main className={`${styles.main} ${inter.className}`}>
-        <h1>Blockchain Comparison</h1>
+        <h1>Blockchains Technical Comparison</h1>
         <p>
-          The most extensive blockchain comparison ever
+          The most extensive blockchain technical comparison ever
           <br />
           <br />
         </p>
