@@ -7,6 +7,20 @@
   min-height: 100vh;
 }
 
+.footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.footer img {
+  top: 5px;
+  position: relative;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -38,6 +52,26 @@
   font-weight: 700;
   font-family: var(--font-mono);
 }
+
+.github {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 1000; /* Ensure the logo appears above other elements */
+}
+
+.github a {
+  color: black; /* Change the color as needed */
+  text-decoration: none;
+}
+
+.github i {
+  background-color: white; /* Add a background color to the icon */
+  border-radius: 5px; /* Optional: to make the corners rounded */
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Optional: add a shadow effect */
+}
+
 
 .grid {
   display: grid;
