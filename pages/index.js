@@ -73,7 +73,7 @@ export default function Home() {
             </thead>
             <tbody>
               {blockchains.map((blockchain) => (
-                <tr>
+                <tr key={blockchain.Blockchain}>
                   <td>
                     <a href={blockchain["Source"]} target="_blank">
                       {blockchain["Blockchain"]}
