@@ -8,19 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 import { useEffect, useState } from "react"
 
-export default function Home() {
-  const [blockchains, setBlockchains] = useState([])
-
-  useEffect(() => {
-    function fetchBlockchains() {
-      fetch("/blockchains.json")
-        .then((response) => response.json())
-        .then(setBlockchains)
-    }
-
-    fetchBlockchains()
-  }, [])
-
+export default function Home({ blockchains }) {
   const yesOrNo = (value) => (value === "yes" ? "✅" : "❌")
 
   return (
@@ -115,4 +103,16 @@ export default function Home() {
       </main>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+  const res = await fetch(`${baseUrl}/blockchains.json`)
+  const blockchains = await res.json()
+
+  return {
+    props: {
+      blockchains,
+    },
+  }
 }
