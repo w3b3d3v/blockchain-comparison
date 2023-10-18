@@ -196,7 +196,7 @@
     "Blockchain": "Cardano",
     "Token": "ADA",
     "Type": "Layer 1",
-    "Tps": 250,
+    "Tps": 10,
     "# nodes": 3000,
     "TX fees (USD)": 0.3,
     "Block Time": "20s",
