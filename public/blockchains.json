@@ -21,7 +21,7 @@
     "Model": "Account",
     "TVL M$": "",
     "Features": "",
-    "Source": ""
+    "Source": "https://alephzero.org/"
   },
   {
     "priority": 5,
@@ -165,7 +165,7 @@
     "Model": "Account",
     "TVL M$": "1,784",
     "Features": "",
-    "Source": ""
+    "Source": "https://www.bnbchain.org/en/smartChain"
   },
   {
     "priority": 1,
@@ -189,7 +189,7 @@
     "Model": "UTXO",
     "TVL M$": 0,
     "Features": "",
-    "Source": ""
+    "Source": "https://l.w3d.community/btc"
   },
   {
     "priority": 2,
@@ -213,7 +213,7 @@
     "Model": "eUTXO",
     "TVL M$": 72,
     "Features": "",
-    "Source": ""
+    "Source": "https://docs.cardano.org/"
   },
   {
     "priority": 3,
@@ -237,7 +237,7 @@
     "Model": "Oracle",
     "TVL M$": "-",
     "Features": "-",
-    "Source": ""
+    "Source": "https://docs.chain.link/"
   },
   {
     "priority": 2,
@@ -261,7 +261,7 @@
     "Model": "Account",
     "TVL M$": 19,
     "Features": "",
-    "Source": ""
+    "Source": "https://docs.celo.org/"
   },
   {
     "priority": 1,
@@ -270,7 +270,7 @@
     "Type": "",
     "Tps": 10000,
     "# nodes": 150,
-    "TX fees (USD)": 0.05,
+    "TX fees (USD)": 0.01,
     "Block Time": "7s",
     "Block Finalizing": "7s",
     "Wallets": "",
@@ -285,7 +285,7 @@
     "Model": "Account",
     "TVL M$": "?",
     "Features": "",
-    "Source": ""
+    "Source": "https://cosmos.network/"
   },
   {
     "priority": 2,
@@ -309,7 +309,7 @@
     "Model": "Account",
     "TVL M$": 184,
     "Features": "",
-    "Source": ""
+    "Source": "https://docs.cronos.org/"
   },
   {
     "priority": 1,
@@ -333,7 +333,7 @@
     "Model": "Account",
     "TVL M$": "?",
     "Features": "",
-    "Source": "https://docs.elrond.com/welcome/welcome-to-elrond/"
+    "Source": "https://docs.multiversx.com/"
   },
   {
     "priority": 1,
@@ -381,7 +381,7 @@
     "Model": "Account",
     "TVL M$": "6,138",
     "Features": "",
-    "Source": ""
+    "Source": "https://ethereum.org/"
   },
   {
     "priority": 1,
@@ -413,11 +413,11 @@
     "Token": "FLOW",
     "Type": "Layer 1",
     "Tps": "",
-    "# nodes": "",
-    "TX fees (USD)": "",
+    "# nodes": 450,
+    "TX fees (USD)": 0.001,
     "Block Time": "",
     "Block Finalizing": "",
-    "Wallets": "22,735,060",
+    "Wallets": "25,735,060",
     "Consense": "Mullti-Role",
     "Native Assets": "no",
     "Smart Contract": "yes",
@@ -429,7 +429,7 @@
     "Model": "Account",
     "TVL M$": "",
     "Features": "",
-    "Source": ""
+    "Source": "https://flow.com/"
   },
   {
     "priority": 2,
@@ -453,7 +453,7 @@
     "Model": "Account",
     "TVL M$": 2,
     "Features": "",
-    "Source": ""
+    "Source": "https://www.harmony.one/"
   },
   {
     "priority": 2,
@@ -462,10 +462,10 @@
     "Type": "Layer 1",
     "Tps": 10000,
     "# nodes": "",
-    "TX fees (USD)": 0.05,
+    "TX fees (USD)": 0.0001,
     "Block Time": "4s",
     "Block Finalizing": "instant",
-    "Wallets": "",
+    "Wallets": "3,717,602",
     "Consense": "Hashgraph",
     "Native Assets": "no",
     "Smart Contract": "yes",
@@ -477,14 +477,14 @@
     "Model": "Account",
     "TVL M$": 25,
     "Features": "",
-    "Source": ""
+    "Source": "https://hedera.com/"
   },
   {
     "priority": 5,
     "Blockchain": "ICP",
     "Token": "ICP",
     "Type": "Layer 1",
-    "Tps": "",
+    "Tps": 3800,
     "# nodes": "",
     "TX fees (USD)": "",
     "Block Time": "",
@@ -501,7 +501,7 @@
     "Model": "Account",
     "TVL M$": 4,
     "Features": "",
-    "Source": ""
+    "Source": "https://internetcomputer.org/"
   },
   {
     "priority": 1,
@@ -549,7 +549,7 @@
     "Model": "UTXO",
     "TVL M$": "?",
     "Features": "",
-    "Source": ""
+    "Source": "https://www.iota.org/"
   },
   {
     "priority": 2,
@@ -597,7 +597,7 @@
     "Model": "UTXO",
     "TVL M$": "?",
     "Features": "",
-    "Source": ""
+    "Source": "https://litecoin.org/"
   },
   {
     "priority": 1,
@@ -621,7 +621,7 @@
     "Model": "UTXO",
     "TVL M$": "-",
     "Features": "",
-    "Source": ""
+    "Source": "https://lightning.network/"
   },
   {
     "priority": 1,
@@ -645,7 +645,7 @@
     "Model": "Account",
     "TVL M$": "",
     "Features": "",
-    "Source": ""
+    "Source": "https://minaprotocol.com/"
   },
   {
     "priority": 5,

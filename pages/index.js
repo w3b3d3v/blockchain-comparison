@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import { Link } from "next/link"
+import styles from "@/styles/Home.module.css"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 import { useEffect, useState } from "react"
 
@@ -36,7 +37,7 @@ export default function Home() {
       </Head>
       <div className={styles.github}>
         <a href="https://github.com/w3b3d3v/blockchain-comparison">
-          <i class="fab fa-github fa-2x"></i>
+          <i className="fab fa-github fa-2x"></i>
         </a>
       </div>
       <main className={`${styles.main} ${inter.className}`}>
@@ -75,9 +76,13 @@ export default function Home() {
               {blockchains.map((blockchain) => (
                 <tr key={blockchain.Blockchain}>
                   <td>
-                    <a href={blockchain["Source"]} target="_blank">
-                      {blockchain["Blockchain"]}
-                    </a>
+                    {blockchain["Source"] !== "" ? (
+                      <a href={blockchain["Source"]} target="_blank">
+                        {blockchain["Blockchain"]}
+                      </a>
+                    ) : (
+                      blockchain["Blockchain"]
+                    )}
                   </td>
                   <td>{blockchain["Token"]}</td>
                   <td>{blockchain["Type"]}</td>
