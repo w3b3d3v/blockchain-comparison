@@ -280,7 +280,7 @@
     "EVM": "yes",
     "WASM": "yes",
     "Other": "",
-    "Language": "Go",
+    "Language": "Go, Rust, Solidity",
     "Structure": "Blockchain",
     "Model": "Account",
     "TVL M$": "?",
