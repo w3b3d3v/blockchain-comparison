@@ -36,7 +36,7 @@ export default function Home({ blockchains }) {
           <br />
         </p>
 
-        <div>
+        <div className="table-container">
           <table>
             <thead>
               <tr>
