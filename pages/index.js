@@ -64,15 +64,16 @@ export default function Home({ blockchains }) {
             <tbody>
               {blockchains.map((blockchain) => (
                 <tr key={blockchain.Blockchain}>
-                  <td>
-                    {blockchain["logo"] && (
+                  <td className={blockchain["logoClass"]}>
+                    {!(blockchain["logoClass"] === "hide") && (
                       <Image
                         alt={blockchain["Blockchain"]}
                         width={20}
                         height={20}
                         src={
                           "https://raw.githubusercontent.com/w3b3d3v/Cryptocurrency_Logos/mainx/PNG/" +
-                          blockchain["logo"]
+                          blockchain["Token"].toLowerCase() +
+                          ".png"
                         }
                       />
                     )}

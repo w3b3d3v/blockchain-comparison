@@ -46,7 +46,8 @@
     "Model": "Account",
     "TVL M$": 43,
     "Features": "",
-    "Source": "https://metrics.algorand.org/"
+    "Source": "https://metrics.algorand.org/",
+    "logoClass": "dark"
   },
   {
     "priority": 1,
@@ -214,7 +215,8 @@
     "Model": "eUTXO",
     "TVL M$": 72,
     "Features": "",
-    "Source": "https://docs.cardano.org/"
+    "Source": "https://docs.cardano.org/",
+    "logoClass": "dark"
   },
   {
     "priority": 3,
@@ -310,7 +312,8 @@
     "Model": "Account",
     "TVL M$": 184,
     "Features": "",
-    "Source": "https://docs.cronos.org/"
+    "Source": "https://docs.cronos.org/",
+    "logoClass": "dark"
   },
   {
     "priority": 1,
@@ -382,7 +385,8 @@
     "Model": "Account",
     "TVL M$": "6,138",
     "Features": "",
-    "Source": "https://ethereum.org/"
+    "Source": "https://ethereum.org/",
+    "logoClass": "dark"
   },
   {
     "priority": 1,
@@ -406,7 +410,8 @@
     "Model": "Account",
     "TVL M$": 48,
     "Features": "",
-    "Source": "https://fantom.foundation/"
+    "Source": "https://fantom.foundation/",
+    "logoClass": "dark"
   },
   {
     "priority": 1,
@@ -478,7 +483,8 @@
     "Model": "Account",
     "TVL M$": 25,
     "Features": "",
-    "Source": "https://hedera.com/"
+    "Source": "https://hedera.com/",
+    "logoClass": "dark"
   },
   {
     "priority": 5,
@@ -622,7 +628,8 @@
     "Model": "UTXO",
     "TVL M$": "-",
     "Features": "",
-    "Source": "https://lightning.network/"
+    "Source": "https://lightning.network/",
+    "logoClass": "hide"
   },
   {
     "priority": 2,
@@ -694,7 +701,8 @@
     "Model": "Account",
     "TVL M$": 21,
     "Features": "- \"Green",
-    "Source": ""
+    "Source": "",
+    "logoClass": "dark"
   },
   {
     "priority": 5,
@@ -838,7 +846,8 @@
     "Model": "Account",
     "TVL M$": "?",
     "Features": "",
-    "Source": ""
+    "Source": "",
+    "logoClass": "dark"
   },
   {
     "priority": 3,
@@ -982,7 +991,8 @@
     "Model": "Account",
     "TVL M$": 24,
     "Features": "",
-    "Source": ""
+    "Source": "",
+    "logoClass": "dark"
   },
   {
     "priority": 5,

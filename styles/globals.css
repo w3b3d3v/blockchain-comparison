@@ -149,3 +149,7 @@ table thead th {
   margin: 0px;
   padding: 0px;
 }
+
+.dark {
+  background-color: white;
+}
