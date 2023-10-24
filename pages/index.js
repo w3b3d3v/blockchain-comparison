@@ -40,6 +40,7 @@ export default function Home({ blockchains }) {
           <table>
             <thead>
               <tr>
+                <th>&nbsp;</th>
                 <th>Blockchain</th>
                 <th>Token</th>
                 <th>Type</th>
@@ -63,6 +64,19 @@ export default function Home({ blockchains }) {
             <tbody>
               {blockchains.map((blockchain) => (
                 <tr key={blockchain.Blockchain}>
+                  <td>
+                    {blockchain["logo"] && (
+                      <Image
+                        alt={blockchain["Blockchain"]}
+                        width={20}
+                        height={20}
+                        src={
+                          "https://raw.githubusercontent.com/w3b3d3v/Cryptocurrency_Logos/mainx/PNG/" +
+                          blockchain["logo"]
+                        }
+                      />
+                    )}
+                  </td>
                   <td>
                     {blockchain["Source"] !== "" ? (
                       <a href={blockchain["Source"]} target="_blank">

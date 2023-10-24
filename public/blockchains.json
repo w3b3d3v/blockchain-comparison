@@ -21,7 +21,8 @@
     "Model": "Account",
     "TVL M$": "",
     "Features": "",
-    "Source": "https://alephzero.org/"
+    "Source": "https://alephzero.org/",
+    "logo": "aleph.png"
   },
   {
     "priority": 5,
