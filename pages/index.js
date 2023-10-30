@@ -38,10 +38,7 @@ export default function Home({ blockchains }) {
         />
       </Head>
       <div className={styles.github}>
-        <a
-          target="_blank"
-          href="https://github.com/w3b3d3v/blockchain-comparison"
-        >
+        <a target="_blank" href="https://github.com/w3b3d3v/blockchain-comparison">
           <i className="fab fa-github fa-2x"></i>
         </a>
       </div>
@@ -82,7 +79,7 @@ export default function Home({ blockchains }) {
                 <th>TVL M$</th>
               </tr>
             </thead>
-            <tbody className={styles.tbody}>
+            <tbody>
               {blockchains.map((blockchain) => (
                 <tr key={blockchain.Blockchain}>
                   <td className={blockchain["logoClass"]}>

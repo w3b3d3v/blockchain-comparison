@@ -7,10 +7,6 @@
   min-height: 100vh;
 }
 
-.tbody {
-  text-align: center;
-}
-
 .footer {
   margin-top: 20px;
   display: flex;
