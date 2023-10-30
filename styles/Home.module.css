@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+.tbody {
+  text-align: center;
+}
+
 .footer {
   margin-top: 20px;
   display: flex;
@@ -37,9 +41,8 @@
   background-color: white; /* Add a background color to the icon */
   border-radius: 5px; /* Optional: to make the corners rounded */
   padding: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Optional: add a shadow effect */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: add a shadow effect */
 }
-
 
 .grid {
   display: grid;
@@ -86,7 +89,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
