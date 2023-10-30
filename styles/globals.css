@@ -123,10 +123,6 @@ table tr td {
   background-color: #333;
 }
 
-tbody {
-  text-align: center;
-}
-
 table thead {
   position: sticky;
   top: 0;
