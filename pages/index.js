@@ -1,15 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { Link } from "next/link"
-import styles from "@/styles/Home.module.css"
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import { Link } from "next/link";
+import styles from "@/styles/Home.module.css";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 export default function Home({ blockchains }) {
-  const yesOrNo = (value) => (value === "yes" ? "✅" : "❌")
+  const yesOrNo = (value) => (value === "yes" ? "✅" : "❌");
 
   return (
     <>
@@ -61,7 +61,7 @@ export default function Home({ blockchains }) {
                 <th>TVL M$</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className={styles.tbody}>
               {blockchains.map((blockchain) => (
                 <tr key={blockchain.Blockchain}>
                   <td className={blockchain["logoClass"]}>
@@ -109,25 +109,35 @@ export default function Home({ blockchains }) {
             </tbody>
           </table>
           <div className={styles.footer}>
-            <a href="https://w3d.community" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://w3d.community"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Made with ❤️ by
-              <Image src="/w3d.svg" alt="WEB3DEV Logo" width={100} height={24} priority />
+              <Image
+                src="/w3d.svg"
+                alt="WEB3DEV Logo"
+                width={100}
+                height={24}
+                priority
+              />
             </a>
           </div>
         </div>
       </main>
     </>
-  )
+  );
 }
 
 export async function getServerSideProps() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-  const res = await fetch(`${baseUrl}/blockchains.json`)
-  const blockchains = await res.json()
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`${baseUrl}/blockchains.json`);
+  const blockchains = await res.json();
 
   return {
     props: {
       blockchains,
     },
-  }
+  };
 }
