@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { Link } from "next/link";
 import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,6 +9,19 @@ import { useEffect, useState } from "react";
 
 export default function Home({ blockchains }) {
   const yesOrNo = (value) => (value === "yes" ? "✅" : "❌");
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    setDarkMode(mediaQuery.matches);
+
+    const listener = (e) => setDarkMode(e.matches);
+    mediaQuery.addListener(listener);
+
+    return () => mediaQuery.removeListener(listener);
+  }, []);
 
   return (
     <>
@@ -37,7 +49,11 @@ export default function Home({ blockchains }) {
         </p>
 
         <div className="table-container">
-          <table className="table table-striped table-dark text-center">
+          <table
+            className={`table table-striped text-center ${
+              darkMode ? "table-dark" : ""
+            }`}
+          >
             <thead>
               <tr>
                 <th>&nbsp;</th>
@@ -110,13 +126,14 @@ export default function Home({ blockchains }) {
           </table>
           <div className={styles.footer}>
             <a
+              className="link-offset-2 link-underline link-underline-opacity-0"
               href="https://w3d.community"
               target="_blank"
               rel="noopener noreferrer"
             >
               Made with ❤️ by
               <Image
-                src="/w3d.svg"
+                src={darkMode ? "/w3d.svg" : "/w3d-black.svg"}
                 alt="WEB3DEV Logo"
                 width={100}
                 height={24}
