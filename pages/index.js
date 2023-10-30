@@ -5,12 +5,12 @@ import styles from "@/styles/Home.module.css"
 import fs from "fs"
 import path from "path"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 export default function Home({ blockchains }) {
-  const yesOrNo = (value) => (value === "yes" ? "✅" : "❌")
+  const yesOrNo = (value) => (value === "yes" ? "✅" : "❌");
 
   const [darkMode, setDarkMode] = useState(false)
 
@@ -82,7 +82,7 @@ export default function Home({ blockchains }) {
                 <th>TVL M$</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className={styles.tbody}>
               {blockchains.map((blockchain) => (
                 <tr key={blockchain.Blockchain}>
                   <td className={blockchain["logoClass"]}>
@@ -149,7 +149,7 @@ export default function Home({ blockchains }) {
         </div>
       </main>
     </>
-  )
+  );
 }
 
 export async function getServerSideProps() {
@@ -161,5 +161,5 @@ export async function getServerSideProps() {
     props: {
       blockchains,
     },
-  }
+  };
 }
