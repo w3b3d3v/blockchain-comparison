@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { Link } from "next/link"
+import { Inter } from "next/font/google"
 import styles from "@/styles/Home.module.css"
+import fs from "fs"
+import path from "path"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -121,9 +122,9 @@ export default function Home({ blockchains }) {
 }
 
 export async function getServerSideProps() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-  const res = await fetch(`${baseUrl}/blockchains.json`)
-  const blockchains = await res.json()
+  const filePath = path.join(process.cwd(), "public", "blockchains.json")
+  const jsonData = fs.readFileSync(filePath, "utf8")
+  const blockchains = JSON.parse(jsonData)
 
   return {
     props: {
