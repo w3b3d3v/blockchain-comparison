@@ -5,12 +5,12 @@ import styles from "@/styles/Home.module.css"
 import fs from "fs"
 import path from "path"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
 export default function Home({ blockchains }) {
-  const yesOrNo = (value) => (value === "yes" ? "✅" : "❌");
+  const yesOrNo = (value) => (value === "yes" ? "✅" : "❌")
 
   const [darkMode, setDarkMode] = useState(false)
 
@@ -38,7 +38,10 @@ export default function Home({ blockchains }) {
         />
       </Head>
       <div className={styles.github}>
-        <a target="_blank" href="https://github.com/w3b3d3v/blockchain-comparison">
+        <a
+          target="_blank"
+          href="https://github.com/w3b3d3v/blockchain-comparison"
+        >
           <i className="fab fa-github fa-2x"></i>
         </a>
       </div>
@@ -146,7 +149,7 @@ export default function Home({ blockchains }) {
         </div>
       </main>
     </>
-  );
+  )
 }
 
 export async function getServerSideProps() {
@@ -158,5 +161,5 @@ export async function getServerSideProps() {
     props: {
       blockchains,
     },
-  };
+  }
 }
