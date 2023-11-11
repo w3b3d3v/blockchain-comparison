@@ -16,11 +16,6 @@
   padding: 1rem;
 }
 
-.footer img {
-  top: 5px;
-  position: relative;
-}
-
 .github {
   position: fixed;
   top: 30px;
@@ -37,9 +32,8 @@
   background-color: white; /* Add a background color to the icon */
   border-radius: 5px; /* Optional: to make the corners rounded */
   padding: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Optional: add a shadow effect */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: add a shadow effect */
 }
-
 
 .grid {
   display: grid;

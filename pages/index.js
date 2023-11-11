@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head"
+import Image from "next/image"
 import { Inter } from "next/font/google"
 import styles from "@/styles/Home.module.css"
 import fs from "fs"
@@ -11,6 +11,19 @@ import { useEffect, useState } from "react"
 
 export default function Home({ blockchains }) {
   const yesOrNo = (value) => (value === "yes" ? "✅" : "❌")
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+
+    setDarkMode(mediaQuery.matches)
+
+    const listener = (e) => setDarkMode(e.matches)
+    mediaQuery.addListener(listener)
+
+    return () => mediaQuery.removeListener(listener)
+  }, [])
 
   return (
     <>
@@ -25,7 +38,10 @@ export default function Home({ blockchains }) {
         />
       </Head>
       <div className={styles.github}>
-        <a href="https://github.com/w3b3d3v/blockchain-comparison">
+        <a
+          target="_blank"
+          href="https://github.com/w3b3d3v/blockchain-comparison"
+        >
           <i className="fab fa-github fa-2x"></i>
         </a>
       </div>
@@ -38,7 +54,11 @@ export default function Home({ blockchains }) {
         </p>
 
         <div className="table-container">
-          <table>
+          <table
+            className={`table table-striped text-center ${
+              darkMode ? "table-dark" : ""
+            }`}
+          >
             <thead>
               <tr>
                 <th>&nbsp;</th>
@@ -110,9 +130,20 @@ export default function Home({ blockchains }) {
             </tbody>
           </table>
           <div className={styles.footer}>
-            <a href="https://w3d.community" target="_blank" rel="noopener noreferrer">
+            <a
+              className="link-offset-2 link-underline link-underline-opacity-0"
+              href="https://w3d.community"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Made with ❤️ by
-              <Image src="/w3d.svg" alt="WEB3DEV Logo" width={100} height={24} priority />
+              <Image
+                src={darkMode ? "/w3d.svg" : "/w3d-black.svg"}
+                alt="WEB3DEV Logo"
+                width={100}
+                height={24}
+                priority
+              />
             </a>
           </div>
         </div>
