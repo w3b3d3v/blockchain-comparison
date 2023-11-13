@@ -150,6 +150,8 @@ table thead th {
   padding: 0px;
 }
 
-.dark {
-  background-color: white;
+.table-striped tbody tr td.dark, td.dark {
+  --bs-table-bg-type: white;
 }
+
+
