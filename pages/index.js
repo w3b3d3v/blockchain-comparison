@@ -9,9 +9,14 @@ const inter = Inter({ subsets: ["latin"] })
 
 import { useEffect, useState } from "react"
 
+const IMAGE_ROOT = "https://raw.githubusercontent.com/w3b3d3v/Cryptocurrency_Logos/mainx/PNG/"
+
 export default function Home({ blockchains }) {
   const yesOrNo = (value) => (value === "yes" ? "✅" : "❌")
-
+  const image = (blockchain) => {
+    const imageName = (blockchain.Token ?? blockchain.Blockchain).toLowerCase()
+    return IMAGE_ROOT + imageName + ".png"
+  }
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
@@ -38,10 +43,7 @@ export default function Home({ blockchains }) {
         />
       </Head>
       <div className={styles.github}>
-        <a
-          target="_blank"
-          href="https://github.com/w3b3d3v/blockchain-comparison"
-        >
+        <a target="_blank" href="https://github.com/w3b3d3v/blockchain-comparison">
           <i className="fab fa-github fa-2x"></i>
         </a>
       </div>
@@ -54,11 +56,7 @@ export default function Home({ blockchains }) {
         </p>
 
         <div className="table-container">
-          <table
-            className={`table table-striped text-center ${
-              darkMode ? "table-dark" : ""
-            }`}
-          >
+          <table className={`table table-striped text-center ${darkMode ? "table-dark" : ""}`}>
             <thead>
               <tr>
                 <th>&nbsp;</th>
@@ -91,11 +89,7 @@ export default function Home({ blockchains }) {
                         alt={blockchain["Blockchain"]}
                         width={20}
                         height={20}
-                        src={
-                          "https://raw.githubusercontent.com/w3b3d3v/Cryptocurrency_Logos/mainx/PNG/" +
-                          blockchain["Token"].toLowerCase() +
-                          ".png"
-                        }
+                        src={image(blockchain)}
                       />
                     )}
                   </td>
