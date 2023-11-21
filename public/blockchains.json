@@ -522,7 +522,7 @@
     "Consense": "Hashgraph",
     "Native Assets": "no",
     "Smart Contract": "yes",
-    "EVM": "no",
+    "EVM": "yes",
     "WASM": "no",
     "Other": "",
     "Language": "Solidity",
