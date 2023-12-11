@@ -118,7 +118,7 @@ export default function Home({ blockchains }) {
                   <td>{blockchain["Language"]}</td>
                   <td>{blockchain["Structure"]}</td>
                   <td>{blockchain["Model"]}</td>
-                  <td>{blockchain["TVL M$"]} </td>
+                  <td>{blockchain.tvl} </td>
                 </tr>
               ))}
             </tbody>
@@ -149,7 +149,16 @@ export default function Home({ blockchains }) {
 export async function getServerSideProps() {
   const filePath = path.join(process.cwd(), "public", "blockchains.json")
   const jsonData = fs.readFileSync(filePath, "utf8")
-  const blockchains = JSON.parse(jsonData)
+  const blochchainsJson = JSON.parse(jsonData)
+  const lamaTvls = await (await fetch("https://api.llama.fi/v2/chains")).json()
+  const tvls = {}
+  for (let item of lamaTvls) {
+    if (item.tokenSymbol) tvls[item.tokenSymbol] = item.tvl / 1_000_000
+  }
+
+  const blockchains = blochchainsJson.map((b) => {
+    return { ...b, tvl: tvls[b.Token] ? tvls[b.Token].toFixed(1) : null }
+  })
 
   return {
     props: {
